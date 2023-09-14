@@ -6,19 +6,19 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <%= render "shared/cdn_assets" %>
+
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
 
   <body>
-    <div style="color: green;">
-      <%= notice %>
-    </div>
+    <%= render "shared/navbar" %>
 
-    <div style="color: red;">
-      <%= alert %>
+    <div class="container mt-3">
+      <%= render "shared/flash_messages" %>
+
+      <%= yield %>
     </div>
-    
-    <%= yield %>
   </body>
 </html>
