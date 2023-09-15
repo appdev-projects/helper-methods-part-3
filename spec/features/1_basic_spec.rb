@@ -110,8 +110,8 @@ describe "The movie details page" do
   it "deletes the movie with a DELETE request", points: 2 do
     visit "/movies/#{movie.id}"
 
-    expect(page).to have_selector("a[href='/movies/#{movie.id}'][data-method='delete']"),
-      "Expected /movies/ID to have 'Delete Movie' link with the proper data-method='delete'."
+    expect(page).to have_selector("a[href='/movies/#{movie.id}'][data-turbo-method='delete']"),
+      "Expected /movies/ID to have 'Delete Movie' link with the proper data-turbo-method='delete'."
   end
 end
 
