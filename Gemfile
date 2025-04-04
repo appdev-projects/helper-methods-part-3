@@ -70,6 +70,9 @@ gem "pundit"
 gem "ransack"
 gem "strip_attributes"
 gem "validate_url"
+gem "carrierwave"
+gem "cloudinary"
+gem "kaminari"
 
 group :development do
   gem "annotaterb"
@@ -88,6 +91,7 @@ end
 group :test do
   gem "shoulda-matchers", "~> 6.4"
   gem "rspec-html-matchers"
+  gem "rails-controller-testing"
   gem "webmock"
   gem "capybara"
   gem "selenium-webdriver", "~> 4.11.0"
